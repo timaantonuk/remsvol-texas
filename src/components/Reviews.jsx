@@ -58,7 +58,7 @@ function classNames(...classes) {
 
 export default function Reviews() {
   return (
-    <div className='bg-[#392820] pt-20'>
+    <div className='bg-[#392820] pt-20 pb-40'>
       <AnimationOnScroll animateIn='animate__fadeInLeftBig'>
         <h1 className='text-center text-white text-5xl font-bold mb-12'>
           Customer Reviews
@@ -75,6 +75,7 @@ export default function Reviews() {
               >
                 <div className='flex-none py-10'>
                   <img
+                  loading='lazy'
                     src={review.avatarSrc}
                     alt=''
                     className='h-20 w-20 lg:h-32 lg:w-32 rounded-full bg-gray-100'

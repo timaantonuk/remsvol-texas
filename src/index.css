@@ -17,3 +17,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ .react-images__header_button--fullscreen{
+  display: none;
+}
+.react-images__view-image .react-images__view-image--isModal{
+  margin: 0px auto !important;
+
+}
+
+img {
+  margin: 0px auto;
+}

@@ -88,6 +88,7 @@ export default function Services() {
               </p>
 
               <img
+              loading="lazy"
                 src={tier.img}
                 alt='section-photo'
                 className='rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 '
