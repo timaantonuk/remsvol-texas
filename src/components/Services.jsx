@@ -6,9 +6,9 @@ const tiers = [
     description: 'The essentials to provide your best work for clients.',
     features: [
       'Our flexible budget optimization methodology allows for the best project management and completion',
-      'With an extensive selection of materials, professionals & methodologies, at Remsvol your ideas will be executed at the highest standards. Minimal to intricate - we will build your dream',
     ],
     featured: false,
+    img: '/img/residential.png',
     cta: 'Apply',
     color: 'bg-[#986235]',
   },
@@ -19,9 +19,9 @@ const tiers = [
     description: 'A plan that scales with your rapidly growing business.',
     features: [
       'Building on the 25+ years of experience & excellence. At Remsvol, customers rely on our stature in the industry',
-      'With commercial and residnetial projects in Washignton and California - our team’s skills are known nation-wide',
     ],
     featured: false,
+    img: '/img/commercial.png',
     cta: 'Apply',
     color: 'bg-[#986235]',
   },
@@ -31,14 +31,10 @@ const tiers = [
     href: '#',
     description: 'Dedicated support and infrastructure for your company.',
     features: [
-      'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
-      '1-hour, dedicated support response time',
-      'Marketing automations',
-      'Custom reporting tools',
+      'With an extensive selection of materials, professionals & methodologies, at Remsvol your ideas will be executed at the highest standards.',
     ],
     featured: true,
+    img: '/img/custom.png',
     cta: 'Apply',
     color: 'bg-[#392820]',
   },
@@ -58,7 +54,8 @@ export default function Services() {
           </p>
         </div>
         <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi vitae fuga voluptas ab enim, quam quae soluta nesciunt odit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          animi vitae fuga voluptas ab enim, quam quae soluta nesciunt odit.
         </p>
         <div className='isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
           {tiers.map((tier) => (
@@ -89,6 +86,13 @@ export default function Services() {
               >
                 {tier.description}
               </p>
+
+              <img
+                src={tier.img}
+                alt='section-photo'
+                className='rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 '
+              />
+
               <p className='mt-6 flex items-baseline gap-x-1'>
                 <span
                   className={classNames(
