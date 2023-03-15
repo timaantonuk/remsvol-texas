@@ -16,7 +16,7 @@ function Dropdown() {
   return (
     <div className="relative">
       <button
-        className="font-semibold rounded inline-flex items-center"
+        className="rounded inline-flex items-center"
         onClick={toggleDropdown}
       >
         <span>Services</span>

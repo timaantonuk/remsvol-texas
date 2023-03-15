@@ -49,15 +49,15 @@ export default function Services() {
     <section className='services__section bg-[#ebe0bf] py-24 sm:py-12'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8 pb-20'>
         <div className='mx-auto max-w-4xl text-center'>
-          <p className=' text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
+          <p className=' text-4xl font-bold tracking-tight text-[#392820] sm:text-5xl'>
             Services
           </p>
         </div>
-        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-[#392820]'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           animi vitae fuga voluptas ab enim, quam quae soluta nesciunt odit.
         </p>
-        <div className='isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
+        <div className='isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 '>
           {tiers.map((tier) => (
             <div
               key={tier.id}
@@ -66,7 +66,7 @@ export default function Services() {
                 tier.featured
                   ? 'Custom bg-[#392820] ring-gray-900'
                   : 'ring-gray-200',
-                'rounded-3xl p-8 ring-1 xl:p-10 '
+                'rounded-3xl p-8 ring-1 xl:p-10 hover:-translate-y-4 duration-150 '
               )}
             >
               <h3
@@ -88,7 +88,7 @@ export default function Services() {
               </p>
 
               <img
-              loading="lazy"
+                loading='lazy'
                 src={tier.img}
                 alt='section-photo'
                 className='rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 '
