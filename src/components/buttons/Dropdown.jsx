@@ -31,12 +31,27 @@ function Dropdown() {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute z-50 bg-[#c09559] py-2 w-32 shadow-lg rounded left-4 top-7">
-          <a href="#" className="block px-4 py-2" onClick={handleLinkClick}>
+        <div className="absolute z-50 bg-[#c09559] py-2 w-32 shadow-lg rounded text-white left-4 top-7 ">
+          <a
+            href="#"
+            className="block px-4 py-2 h-full hover:bg-[#392820]  duration-300 "
+            onClick={handleLinkClick}
+          >
             Residential
           </a>
-          <a href="#" className="block px-4 py-2 " onClick={handleLinkClick}>
+          <a
+            href="#"
+            className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+            onClick={handleLinkClick}
+          >
             Commercial
+          </a>
+          <a
+            href="#"
+            className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+            onClick={handleLinkClick}
+          >
+            Custom
           </a>
         </div>
       )}
