@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import { Link } from "react-scroll";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,29 +32,31 @@ function Dropdown() {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute z-50 bg-[#c09559] py-2 w-32 shadow-lg rounded text-white left-4 top-7 ">
-          <a
-            href="#"
-            className="block px-4 py-2 h-full hover:bg-[#392820]  duration-300 "
-            onClick={handleLinkClick}
-          >
-            Residential
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 hover:bg-[#392820] duration-300 "
-            onClick={handleLinkClick}
-          >
-            Commercial
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 hover:bg-[#392820] duration-300 "
-            onClick={handleLinkClick}
-          >
-            Custom
-          </a>
-        </div>
+        <Link to="services" smooth={true} duration={500}>
+          <div className="absolute z-50 bg-[#c09559] py-2 w-32 shadow-lg rounded text-white left-4 top-7 ">
+            <a
+              href="#"
+              className="block px-4 py-2 h-full hover:bg-[#392820]  duration-300 "
+              onClick={handleLinkClick}
+            >
+              Residential
+            </a>
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+              onClick={handleLinkClick}
+            >
+              Commercial
+            </a>
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+              onClick={handleLinkClick}
+            >
+              Custom
+            </a>
+          </div>
+        </Link>
       )}
     </div>
   );

@@ -65,7 +65,7 @@
 export default function AboutUs() {
   return (
     // OnHover should move
-    <div className="relative bg-[#221813]">
+    <div className="relative bg-[#221813]" id="about-us">
       <div className="relative h-80 overflow-hidden bg-[#ebe0bf] md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
         <img
           className="h-full w-full object-cover"
