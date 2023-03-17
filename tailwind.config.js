@@ -6,5 +6,5 @@ module.exports = {
       display: ['Arimo', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

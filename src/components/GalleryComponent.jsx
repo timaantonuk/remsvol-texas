@@ -85,7 +85,7 @@ function GalleryComponent() {
           Our Works
         </h1>
         <Gallery photos={photos} onClick={openLightbox} />
-        <div className="flex justify-center">
+        <div className="flex justify-center" id='brokephotos'>
           <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox}>
