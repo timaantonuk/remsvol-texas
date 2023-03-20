@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 const tiers = [
   {
     name: "Residential",
@@ -102,18 +103,20 @@ export default function Services() {
                   )}
                 ></span>
               </p>
-              <a
-                href={tier.href}
-                aria-describedby={tier.id}
-                className={classNames(
-                  tier.featured
-                    ? "bg-[#986235] text-white hover:bg-[#a67651] focus-visible:outline-white"
-                    : "bg-[#a67651] text-white shadow-sm hover:bg-[#82532a] focus-visible:outline-indigo-600",
-                  "mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                )}
-              >
-                {tier.cta}
-              </a>
+              <Link to="apply-form" smooth={true} duration={500}>
+                <a
+                  href={tier.href}
+                  aria-describedby={tier.id}
+                  className={classNames(
+                    tier.featured
+                      ? "bg-[#986235] text-white hover:bg-[#a67651] focus-visible:outline-white"
+                      : "bg-[#a67651] text-white shadow-sm hover:bg-[#82532a] focus-visible:outline-indigo-600",
+                    "mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  )}
+                >
+                  {tier.cta}
+                </a>
+              </Link>
               <ul
                 role="list"
                 className={classNames(

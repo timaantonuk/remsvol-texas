@@ -81,11 +81,11 @@ function GalleryComponent() {
   return (
     <div className="w-full bg-[#ebe0bf] p-12 flex items-center justify-center  pt-20">
       <div className="gallery-section w-[80%] bg-[#986235] bg-opacity-20 rounded-3xl p-4 ">
-        <h1 className="text-5xl flex justify-center pb-20 font-bold text-[#392820]">
+        <h1 className="text-5xl flex justify-center pb-8 pt-8 font-bold text-[#392820]">
           Our Works
         </h1>
         <Gallery photos={photos} onClick={openLightbox} />
-        <div className="flex justify-center" id='brokephotos'>
+        <div className="flex justify-center" id="brokephotos">
           <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox}>
