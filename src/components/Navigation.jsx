@@ -2,12 +2,13 @@ import React from "react";
 import Dropdown from "./buttons/Dropdown";
 import { Link } from "react-scroll";
 import RightArrow from "../assets/icons/RightArrow";
+import HeaderDropdownMobile from "./buttons/HeaderDropdownMobile";
 
 const Navigation = () => {
   return (
     <nav className="navigation sticky top-0">
-      <div className="navigation__wrapper flex justify-center md:justify-between lg:justify-between flex-wrap items-center  flex-row h-28 px-10 bg-[#ebe0bf]">
-        <div className="navigation__items ">
+      <div className="navigation__wrapper flex justify-center sm:gap-8 lg:gap-2 lg:justify-center flex-wrap items-center  flex-row h-28 px-10 bg-[#ebe0bf]">
+        <div className="navigation__items hidden md:hidden lg:block">
           <ul className="flex flex-row gap-6 md:gap-4 lg:gap-4">
             <li className="navigation__item duration-300 hover:translate-y-[-0.4rem] text-[#392820]">
               <Link to="about-us" smooth={true} duration={500}>
@@ -32,14 +33,14 @@ const Navigation = () => {
           </ul>
         </div>
         <Link to="header" smooth={true} duration={500}>
-          <div className="navigation__logo w-40 ">
+          <div className="navigation__logo w-40 mr-32 lg:mr-0  ">
             <a href="">
               <img loading="lazy" src="/img/logo-v2.png" alt="Remsvol" />
             </a>
           </div>
         </Link>
         {/* SKRYTO na mobilah  */}
-        <div className="navigation__icons gap-4 hidden lg:flex items-center">
+        <div className="navigation__icons gap-4 hidden md:hidden lg:flex items-center">
           <Link to="contact-us" smooth={true} duration={500}>
             <a href="#">
               <img
@@ -104,6 +105,9 @@ const Navigation = () => {
               </a>
             </div>
           </Link>
+        </div>
+        <div className="lg:hidden ">
+          <HeaderDropdownMobile />
         </div>
       </div>
     </nav>
