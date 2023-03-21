@@ -89,9 +89,9 @@ export default function Services() {
               </p>
 
               <img
+                alt="section-img"
                 loading="lazy"
                 src={tier.img}
-                alt="section-photo"
                 className="rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 "
               />
 
@@ -118,7 +118,6 @@ export default function Services() {
                 </a>
               </Link>
               <ul
-                role="list"
                 className={classNames(
                   tier.featured ? "text-gray-300" : "text-gray-200",
                   "mt-8 space-y-3 text-sm leading-6 xl:mt-10"

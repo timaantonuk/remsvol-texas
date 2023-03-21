@@ -1,7 +1,8 @@
 // import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { useFormik } from "formik";
-import DropdownInput from "../components/DropdownInput";
+import DropdownBusiness from "../components/buttons/DropdownBusiness";
 import { validationSchema } from "../constants/validationSchema";
+import DropdownServices from "../components/buttons/DropdownServices";
 
 export default function ApplyForm() {
   const initialValues = {
@@ -161,13 +162,13 @@ export default function ApplyForm() {
 
         <div className="lg:flex justify-between lg:w-2/3 w-4/5 gap-4 mt-4">
           <div className="lg:w-1/2 bg-white rounded-lg mb-4 lg:mb-0">
-            <p className="text-center">Business type:</p>
-            <DropdownInput />
+            <p className="text-center">Services type:</p>
+            <DropdownServices />
           </div>
 
           <div className="lg:w-1/2 bg-white rounded-lg">
-            <p className="text-center">Services type:</p>
-            <DropdownInput />
+            <p className="text-center">Business type:</p>
+            <DropdownBusiness />
           </div>
         </div>
 
