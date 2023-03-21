@@ -61,7 +61,7 @@ export default function Reviews() {
     <div id="reviews" className="bg-[#392820] pt-20 pb-40">
       <AnimationOnScroll animateIn="animate__fadeInLeftBig">
         <h1 className="text-center text-white text-5xl font-bold mb-12">
-          Customer Reviews
+          Company Reviews
         </h1>
 
         <div className="review lg:mx-16 mx-10">
