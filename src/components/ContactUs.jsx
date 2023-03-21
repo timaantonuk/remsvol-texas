@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState } from "react";
-import { MyMapComponent } from "./MapComponent";
+// import { MyMapComponent } from "./MapComponent";
 
 const ContactUs = () => {
   return (
@@ -27,7 +27,7 @@ const ContactUs = () => {
           <p className="mt-6 text-base leading-7 text-[#221813]">
             Our address: 4625 Alexander Dr. Ste. 135
           </p>
-          <MyMapComponent />
+          {/* <MyMapComponent /> */}
           <p className="mt-6 text-base leading-7 text-[#221813]">
             Postcode: Alpharetta, GA 30022
           </p>
