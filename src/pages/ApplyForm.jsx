@@ -1,10 +1,18 @@
-// import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { useFormik } from "formik";
+
 import DropdownBusiness from "../components/buttons/DropdownBusiness";
 import { validationSchema } from "../constants/validationSchema";
 import DropdownServices from "../components/buttons/DropdownServices";
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
 
-export default function ApplyForm() {
+const ApplyForm = () => {
+  // EmailJS + Formik
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+  };
+
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -18,11 +26,24 @@ export default function ApplyForm() {
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: (values, actions) => {
-      alert(JSON.stringify(values));
+    onSubmit: (values, { resetForm }) => {
+      emailjs
+        .sendForm(
+          "service_gnpclny", // Service ID
+          "template_cfw4dja", // Template ID
+          form.current,
+          "r2sy_1k4kc53UiLwG" // Public key
+        )
+        .then((result, error) => {
+          console.log(result.text);
+          console.log(error.text);
+          resetForm();
+        })
+        .catch((errors) => {
+          console.log(formik.errors);
+        });
     },
   });
-
   console.log(formik.errors);
   return (
     <div className="bg-[#392820] pt-20" id="apply-form">
@@ -30,7 +51,11 @@ export default function ApplyForm() {
         Client application
       </h1>
 
-      <form className="flex justify-center items-center flex-col">
+      <form
+        ref={form}
+        onSubmit={(sendEmail, formik.handleSubmit)}
+        className="flex justify-center items-center flex-col"
+      >
         {/* // first name */}
 
         <div className="first-row lg:flex justify-between lg:w-2/3 gap-4 w-4/5">
@@ -213,7 +238,7 @@ export default function ApplyForm() {
               onChange={(e) =>
                 formik.setFieldValue("additionalInformation", e.target.value)
               }
-              type="email"
+              type="text"
               name="additionalInformation"
               id="additionalInformation"
               className=" block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
@@ -223,6 +248,7 @@ export default function ApplyForm() {
         </div>
         <div className=" lg:flex justify-between mt-4 h-36 items-center lg:h-48 lg:w-2/3 gap-4 w-4/5">
           <button
+            value="Send"
             onClick={formik.handleSubmit}
             type="submit"
             className=" flex justify-center w-full text-center rounded-md text-lg bg-[#986235] mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 "
@@ -233,4 +259,6 @@ export default function ApplyForm() {
       </form>
     </div>
   );
-}
+};
+
+export default ApplyForm;

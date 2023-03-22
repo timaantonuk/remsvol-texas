@@ -10,13 +10,13 @@ const people = [
   },
   {
     id: 2,
-    name: "Cabinets",
+    name: "Cabinets *",
     avatar: "./img/business-type/cabinets.jpeg",
   },
   {
     id: 3,
     name: "Communication",
-    avatar: "./img/business-type/communication.jpg",
+    avatar: "./img/business-type/communication.png",
   },
   {
     id: 4,
