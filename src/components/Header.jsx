@@ -4,7 +4,7 @@ import Bg_video from "../assets/bg-video-1.mp4";
 
 const Header = () => {
   return (
-    <header className="" id="header">
+    <header className="relative z-50" id="header">
       <Navigation />
       <div className="">
         <div className="overflow-clip lg:h-[35rem] h-[65vh] relative -z-10">

@@ -5,6 +5,7 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 export const Routes = () => {
     const router = createBrowserRouter([
@@ -18,6 +19,6 @@ export const Routes = () => {
           },
       ]);
   return (
-    <RouterProvider router={router} />
+    <ErrorBoundary><RouterProvider router={router} /></ErrorBoundary>
   )
 }

@@ -25,7 +25,7 @@ export default function ApplyForm() {
 
   console.log(formik.errors);
   return (
-    <div className="bg-[#392820] pt-20 pb-40" id="apply-form">
+    <div className="bg-[#392820] pt-20" id="apply-form">
       <h1 className="text-center text-white text-5xl font-bold mb-20">
         Client application
       </h1>
@@ -160,7 +160,7 @@ export default function ApplyForm() {
 
         {/* business type and services type */}
 
-        <div className="lg:flex justify-between lg:w-2/3 w-4/5 gap-4 mt-4">
+        <div className="lg:flex justify-between lg:w-2/3 w-4/5 gap-4 my-4 lg:mt-4 lg:mb-0">
           <div className="lg:w-1/2 bg-white rounded-lg mb-4 lg:mb-0">
             <p className="text-center">Services type:</p>
             <DropdownServices />
@@ -221,11 +221,11 @@ export default function ApplyForm() {
             />
           </div>
         </div>
-        <div className=" lg:flex justify-between lg:w-2/3 gap-4 w-4/5">
+        <div className=" lg:flex justify-between mt-4 h-36 items-center lg:h-48 lg:w-2/3 gap-4 w-4/5">
           <button
             onClick={formik.handleSubmit}
             type="submit"
-            className=" flex justify-center text-center rounded-md text-lg bg-[#986235] mx-auto w-1/2 py-4 mt-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 "
+            className=" flex justify-center w-full text-center rounded-md text-lg bg-[#986235] mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 "
           >
             Submit
           </button>

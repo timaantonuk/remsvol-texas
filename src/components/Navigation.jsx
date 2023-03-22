@@ -1,117 +1,100 @@
-import React from "react";
-import Dropdown from "./buttons/Dropdown";
-import { Link } from "react-scroll";
-import RightArrow from "../assets/icons/RightArrow";
-import HeaderDropdownMobile from "./buttons/HeaderDropdownMobile";
+import React from 'react'
+import Dropdown from './buttons/Dropdown'
+import { Link } from 'react-scroll'
+import RightArrow from '../assets/icons/RightArrow'
+import HeaderDropdownMobile from './buttons/HeaderDropdownMobile'
+import NavLink from './NavLink/NavLink'
+import { Link as RouterLink } from 'react-router-dom'
 
 const Navigation = () => {
   return (
-    <nav className="navigation sticky top-0">
-      <div className="navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 lg:justify-center flex-wrap items-center  flex-row h-28 px-10 bg-[#ebe0bf]">
-        <div className="navigation__items hidden md:hidden lg:block">
-          <ul className="flex flex-row gap-6 md:gap-4 lg:gap-6">
-            <li className="navigation__item duration-300 hover:translate-y-[-0.4rem] text-[#392820]">
-              <Link to="about-us" smooth={true} duration={500}>
-                About us
-              </Link>
+    <nav className='navigation sticky top-0'>
+      <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-28 px-10 bg-[#ebe0bf]'>
+        <div className='navigation__items hidden md:hidden lg:block'>
+          <ul className='flex flex-row gap-6 md:gap-4 lg:gap-6'>
+            <NavLink href='about-us' text='About us' />
+            <li className='navigation__item duration-300 hover:translate-y-[-0.2rem] text-[#392820]'>
+              <Dropdown />
             </li>
-            <li className="navigation__item duration-300 hover:translate-y-[-0.4rem] text-[#392820]">
-              <a>
-                <Dropdown />
-              </a>
-            </li>
-            <li className="navigation__item duration-300 hover:translate-y-[-0.4rem] text-[#392820]">
-              <Link to="reviews" smooth={true} duration={500}>
-                Reviews
-              </Link>
-            </li>
-            <Link to="contact-us" smooth={true} duration={500}>
-              <li className="navigation__item duration-300 hover:translate-y-[-0.4rem] text-[#392820]">
-                <a>Contact us</a>
-              </li>
-            </Link>
+            <NavLink href='reviews' text='Reviews' />
+            <NavLink href='contact-us' text='Contact us' />
           </ul>
         </div>
-        <Link to="header" smooth={true} duration={500}>
-          <div className="navigation__logo w-40  lg:mr-0  ">
-            <a href="">
-              <img loading="lazy" src="/img/logo-v2.png" alt="Remsvol" />
-            </a>
+        <RouterLink href='#'>
+          <div className='navigation__logo w-40  lg:mr-48'>
+            <img loading='lazy' src='/img/logo-v2.png' className='sepia-[0.7]' alt='Remsvol' />
           </div>
-        </Link>
+        </RouterLink>
         {/* SKRYTO na mobilah  */}
-        <div className="navigation__icons md:gap-4 gap-8 hidden md:hidden lg:flex items-center">
-          <Link to="contact-us" smooth={true} duration={500}>
-            <a href="#">
-              <img
-                loading="lazy"
-                className="h-6"
-                src="/img/icons/mail-icon.png"
-                alt="Mail to"
-              />
-            </a>
-          </Link>
-          <a
-            href="https://www.instagram.com/remsvol/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              loading="lazy"
-              className="h-6"
-              src="/img/icons/instagram-icon.png"
-              alt="Instagram"
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/people/Remsvol-LLC/100077963119966/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              loading="lazy"
-              className="h-6"
-              src="/img/icons/facebook-icon.png"
-              alt="Facebook"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UC5NMmpM3PEhac5A9fjvhDfA"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              loading="lazy"
-              className="h-6"
-              src="/img/icons/youtube-icon.png"
-              alt="Youtube"
-            />
-          </a>
-          <Link to="contact-us" smooth={true} duration={500}>
-            <a href="#">
-              <img
-                loading="lazy"
-                className="h-6"
-                src="/img/icons/phone-icon.png"
-                alt="contact to"
-              />
-            </a>
-          </Link>
-          <Link to="apply-form" smooth={true} duration={500}>
-            <div className="navigation__button text-white bg-[#392820] p-3 rounded-lg duration-300 hover:bg-[#665337] ">
-              <a className="flex">
-                GET AN ESTIMATE
-                <RightArrow />
+        <div className='navigation__icons md:gap-4 gap-8 hidden md:hidden lg:flex items-center'>
+          <div className='lg:hidden'>
+            <Link to='contact-us' smooth={true} duration={500}>
+              <a href='#'>
+                <img
+                  loading='lazy'
+                  className='h-6'
+                  src='/img/icons/mail-icon.png'
+                  alt='Mail to'
+                />
               </a>
+            </Link>
+            <a
+              href='https://www.instagram.com/remsvol/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img
+                loading='lazy'
+                className='h-6'
+                src='/img/icons/instagram-icon.png'
+                alt='Instagram'
+              />
+            </a>
+            <a
+              href='https://www.facebook.com/people/Remsvol-LLC/100077963119966/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img
+                loading='lazy'
+                className='h-6'
+                src='/img/icons/facebook-icon.png'
+                alt='Facebook'
+              />
+            </a>
+            <a
+              href='https://www.youtube.com/channel/UC5NMmpM3PEhac5A9fjvhDfA'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img
+                loading='lazy'
+                className='h-6'
+                src='/img/icons/youtube-icon.png'
+                alt='Youtube'
+              />
+            </a>
+            <Link to='contact-us' smooth={true} duration={500}>
+              <a href='#'>
+                <img
+                  loading='lazy'
+                  className='h-6'
+                  src='/img/icons/phone-icon.png'
+                  alt='contact to'
+                />
+              </a>
+            </Link>
+          </div>
+          <Link to='apply-form' smooth={true} duration={500}>
+            <div className='navigation__button bg-[#ebe0bf] text-[#392820] cursor-pointer p-1 duration-300 hover:pb-2 transition-all border-b border-[#392820]'>
+                Apply now
             </div>
           </Link>
         </div>
-        <div className="lg:hidden ">
-          <HeaderDropdownMobile />
-        </div>
+        <HeaderDropdownMobile />
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

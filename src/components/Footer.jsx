@@ -51,10 +51,10 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className='bg-[#392820] h-72'>
-      <div className='mx-auto max-w-7xl overflow-hidden px-6 pt-20 lg:px-8'>
+    <footer className='bg-[#392820] h-56'>
+      <div className='mx-auto max-w-7xl overflow-hidden px-6 pt-[60px] lg:px-8'>
         <nav
-          className='-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12 text-center lg:gap-16'
+          className='-mb-6 columns-4 lg:columns-2 sm:flex sm:justify-center gap-0 lg:gap-4 text-center'
           aria-label='Footer'
         >
           {navigation.main.map((item) => (
@@ -68,19 +68,19 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className='mt-10 flex justify-center space-x-10'>
+        <div className='mt-5 flex justify-center space-x-10'>
           {navigation.social.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className='text-white hover:text-[#a67651]'
+              className='text-white hover:text-[#a67651] cursor-pointer'
             >
               <span className='sr-only'>{item.name}</span>
               <item.icon className='h-6 w-6' aria-hidden='true' />
             </a>
           ))}
         </div>
-        <p className='mt-10 text-center text-xs leading-5 text-white hover:text-[#a67651]'>
+        <p className='mt-5 text-center text-xs leading-5 text-white'>
           &copy; 2023 Remsvol Texas, Inc. All rights reserved.
         </p>
       </div>
