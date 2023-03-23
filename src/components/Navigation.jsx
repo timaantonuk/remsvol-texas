@@ -1,30 +1,35 @@
-import React from 'react'
-import Dropdown from './buttons/Dropdown'
-import { Link } from 'react-scroll'
-import RightArrow from '../assets/icons/RightArrow'
-import HeaderDropdownMobile from './buttons/HeaderDropdownMobile'
-import NavLink from './NavLink/NavLink'
-import { Link as RouterLink } from 'react-router-dom'
+import React from 'react';
+import Dropdown from './buttons/Dropdown';
+import { Link } from 'react-scroll';
+import HeaderDropdownMobile from './buttons/HeaderDropdownMobile';
+import NavLink from './NavLink/NavLink';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <nav className='navigation sticky top-0'>
-      <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-28 px-10 bg-[#ebe0bf]'>
+      <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-[#ebe0bf]'>
+        <div className='navigation__logo w-40  lg:mr-48'>
+          <a href='#' className='navigation__logo link'>
+            <img
+              loading='lazy'
+              src='/img/logo-v3.png'
+              className=''
+              alt='Remsvol'
+            />
+          </a>
+        </div>
         <div className='navigation__items hidden md:hidden lg:block'>
-          <ul className='flex flex-row gap-6 md:gap-4 lg:gap-6'>
-            <NavLink href='about-us' text='About us' />
+          <ul className='flex flex-row gap-6 md:gap-4 lg:gap-6 font-bold lg:text-lg'>
+            <NavLink href='about-us' text='ABOUT US' />
             <li className='navigation__item duration-300 hover:translate-y-[-0.2rem] text-[#392820]'>
               <Dropdown />
             </li>
-            <NavLink href='reviews' text='Reviews' />
-            <NavLink href='contact-us' text='Contact us' />
+            <NavLink href='reviews' text='REVIEWS' />
+            <NavLink href='contact-us' text='CONTACT US' />
           </ul>
         </div>
-        <RouterLink href='#'>
-          <div className='navigation__logo w-40  lg:mr-48'>
-            <img loading='lazy' src='/img/logo-v2.png' className='sepia-[0.7]' alt='Remsvol' />
-          </div>
-        </RouterLink>
+        <RouterLink href='#'></RouterLink>
         {/* SKRYTO na mobilah  */}
         <div className='navigation__icons md:gap-4 gap-8 hidden md:hidden lg:flex items-center'>
           <div className='lg:hidden'>
@@ -86,15 +91,15 @@ const Navigation = () => {
             </Link>
           </div>
           <Link to='apply-form' smooth={true} duration={500}>
-            <div className='navigation__button bg-[#ebe0bf] text-[#392820] cursor-pointer p-1 duration-300 hover:pb-2 transition-all border-b border-[#392820]'>
-                Apply now
+            <div className='navigation__button bg-[#392820] text-[#ebe0bf] cursor-pointer p-3 rounded-3xl duration-300 hover:-translate-y-1 transition-all text-lg font-bold px-5'>
+              APPLY NOW
             </div>
           </Link>
         </div>
         <HeaderDropdownMobile />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

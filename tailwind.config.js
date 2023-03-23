@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Arimo', 'sans-serif'],
+      display: ['Rubik', 'sans-serif'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

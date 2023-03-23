@@ -60,12 +60,12 @@ export default function Reviews() {
   return (
     <div id="reviews" className="bg-[#392820] pt-20 pb-40">
       <AnimationOnScroll animateIn="animate__fadeInLeftBig">
-        <h1 className="text-center text-white text-5xl font-bold mb-12">
+        <h1 className="text-center text-white lg:text-5xl text-3xl font-bold mb-12">
           Company Reviews
         </h1>
 
         <div className="review lg:mx-16 mx-10">
-          <h2 className="sr-only">Customer Reviews</h2>
+          <h2 className="sr-only">Company Reviews</h2>
 
           <div className="-my-10">
             {reviews.map((review, reviewIdx) => (

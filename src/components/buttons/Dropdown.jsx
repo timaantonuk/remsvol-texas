@@ -26,7 +26,7 @@ function Dropdown() {
         className="rounded inline-flex items-center"
         onClick={toggleDropdown}
       >
-        <span>Services</span>
+        <span>SERVICES</span>
         <svg
           className={`fill-current h-4 w-4 transition-all ${
             isOpen ? "transform rotate-180" : ""
@@ -39,24 +39,24 @@ function Dropdown() {
       </button>
         <animated.div style={styledProps} className='absolute'>
           <Link to="services" smooth={true} duration={500}>
-            <div className="absolute z-50 bg-[#c09559] py-2 w-32 shadow-lg rounded text-white left-4 top-7 ">
+            <div className="absolute z-50 bg-[#ebe0bf] py-2 w-32 shadow-lg rounded text-[#392820] left-4 top-7 ">
               <a
                 href="#"
-                className="block px-4 py-2 h-full hover:bg-[#392820]  duration-300 "
+                className="block px-4 py-2 h-full hover:bg-[#392820] hover:text-white  duration-300 "
                 onClick={handleLinkClick}
               >
                 Residential
               </a>
               <a
                 href="#"
-                className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+                className="block px-4 py-2 hover:bg-[#392820] hover:text-white  duration-300 "
                 onClick={handleLinkClick}
               >
                 Commercial
               </a>
               <a
                 href="#"
-                className="block px-4 py-2 hover:bg-[#392820] duration-300 "
+                className="block px-4 py-2 hover:bg-[#392820] hover:text-white  duration-300 "
                 onClick={handleLinkClick}
               >
                 Custom
