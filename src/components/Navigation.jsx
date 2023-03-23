@@ -91,7 +91,7 @@ const Navigation = () => {
             </Link>
           </div>
           <Link to='apply-form' smooth={true} duration={500}>
-            <div className='navigation__button bg-[#392820] text-[#ebe0bf] cursor-pointer p-3 rounded-3xl duration-300 hover:-translate-y-1 transition-all text-lg font-bold px-5'>
+            <div className='navigation__button bg-[#392820] text-[#ebe0bf] cursor-pointer p-3 rounded-3xl duration-300 hover:-translate-y-1 transition-all text-lg font-bold lg:px-5'>
               APPLY NOW
             </div>
           </Link>
