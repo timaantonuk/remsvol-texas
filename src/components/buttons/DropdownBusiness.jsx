@@ -109,11 +109,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function DropdownBusiness() {
+export default function DropdownBusiness({onChange}) {
   const [selected, setSelected] = useState(people[0]);
 
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={selected} onChange={(value)=>{setSelected(value);onChange(value.name)}}>
       {({ open }) => (
         <>
           <div className="relative  mt-2">

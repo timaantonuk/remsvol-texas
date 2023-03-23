@@ -21,12 +21,14 @@ const ApplyForm = () => {
     licenseNumber: "",
     phoneNumber: "",
     additionalInformation: "",
+    services: "",
+    businessType: "",
   };
 
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: (values) => {
       emailjs
         .sendForm(
           "service_gnpclny", // Service ID
@@ -37,12 +39,13 @@ const ApplyForm = () => {
         .then((result, error) => {
           console.log(result.text);
           console.log(error.text);
-          resetForm();
+          
         })
         .catch((errors) => {
           console.log(formik.errors);
         });
-    },
+        formik.handleReset()
+      },
   });
   console.log(formik.errors);
   return (
@@ -53,7 +56,7 @@ const ApplyForm = () => {
 
       <form
         ref={form}
-        onSubmit={(sendEmail, formik.handleSubmit)}
+        onSubmit={formik.handleSubmit}
         className="flex justify-center items-center flex-col"
       >
         {/* // first name */}
@@ -70,6 +73,7 @@ const ApplyForm = () => {
               onChange={(e) =>
                 formik.setFieldValue("firstName", e.target.value)
               }
+              value={formik.values.firstName}
               type="text"
               name="firstName"
               id="name"
@@ -95,6 +99,7 @@ const ApplyForm = () => {
               onChange={(e) => formik.setFieldValue("lastName", e.target.value)}
               type="text"
               name="lastName"
+              value={formik.values.lastName}
               id="surname"
               className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
               placeholder="Brown"
@@ -130,6 +135,7 @@ const ApplyForm = () => {
               type="email"
               name="email"
               id="email"
+              value={formik.values.email}
               className=" block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
               placeholder="alexbrown@example.com"
             />
@@ -156,6 +162,7 @@ const ApplyForm = () => {
             }
             type="text"
             name="companyName"
+            value={formik.values.companyName}
             id="companyName"
             className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
             placeholder="Example LLC"
@@ -176,6 +183,7 @@ const ApplyForm = () => {
               formik.setFieldValue("licenseNumber", e.target.value)
             }
             type="text"
+            value={formik.values.licenseNumber}
             name="licenseNumber"
             id="license"
             className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
@@ -188,12 +196,12 @@ const ApplyForm = () => {
         <div className="lg:flex justify-between lg:w-2/3 w-4/5 gap-4 my-4 lg:mt-4 lg:mb-0">
           <div className="lg:w-1/2 bg-white rounded-lg mb-4 lg:mb-0">
             <p className="text-center">Services type:</p>
-            <DropdownServices />
+            <DropdownServices onChange={(value)=>formik.setFieldValue("services", value)} />
           </div>
 
           <div className="lg:w-1/2 bg-white rounded-lg">
             <p className="text-center">Business type:</p>
-            <DropdownBusiness />
+            <DropdownBusiness onChange={(value)=>formik.setFieldValue("businessType", value)} />
           </div>
         </div>
 
@@ -211,6 +219,7 @@ const ApplyForm = () => {
               onChange={(e) =>
                 formik.setFieldValue("phoneNumber", e.target.value)
               }
+              value={formik.values.phoneNumber}
               type="text"
               name="phoneNumber"
               id="phoneNumber"
@@ -238,6 +247,7 @@ const ApplyForm = () => {
               onChange={(e) =>
                 formik.setFieldValue("additionalInformation", e.target.value)
               }
+              value={formik.values.additionalInformation}
               type="text"
               name="additionalInformation"
               id="additionalInformation"
@@ -250,8 +260,9 @@ const ApplyForm = () => {
           <button
             value="Send"
             onClick={formik.handleSubmit}
+            disabled={formik.isSubmitting}
             type="submit"
-            className=" flex justify-center w-full text-center rounded-md text-lg bg-[#986235] mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 "
+            className=" flex justify-center w-full text-center rounded-md text-lg bg-[#986235] mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 disabled:opacity-50 disabled:cursor-not-allowed "
           >
             Submit
           </button>
