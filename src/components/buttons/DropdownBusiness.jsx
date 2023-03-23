@@ -110,21 +110,21 @@ function classNames(...classes) {
 }
 
 export default function DropdownBusiness({onChange}) {
-  const [selected, setSelected] = useState(people[0]);
+  const [selected, setSelected] = useState(null);
 
   return (
     <Listbox value={selected} onChange={(value)=>{setSelected(value);onChange(value.name)}}>
       {({ open }) => (
         <>
           <div className="relative  mt-2">
-            <Listbox.Button className="relative flex justify-around w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-[#986235] sm:text-sm sm:leading-6">
+            <Listbox.Button className="min-h-[36px] relative flex justify-around w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-[#986235] sm:text-sm sm:leading-6">
               <span className="flex items-center">
-                <img
+                {selected && <img
                   src={selected.avatar}
                   alt=""
                   className="h-5 w-5 flex-shrink-0 rounded-full"
-                />
-                <span className="ml-3 block truncate">{selected.name}</span>
+                />}
+                <span className="ml-3 block truncate">{selected?.name}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
                 <ChevronUpDownIcon

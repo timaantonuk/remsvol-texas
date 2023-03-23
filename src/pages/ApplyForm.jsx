@@ -30,10 +30,10 @@ const ApplyForm = () => {
     validationSchema,
     onSubmit: (values) => {
       emailjs
-        .sendForm(
+        .send(
           "service_gnpclny", // Service ID
           "template_cfw4dja", // Template ID
-          form.current,
+          values,
           "r2sy_1k4kc53UiLwG" // Public key
         )
         .then((result, error) => {
@@ -47,7 +47,7 @@ const ApplyForm = () => {
         formik.handleReset()
       },
   });
-  console.log(formik.errors);
+  console.log(formik.values);
   return (
     <div className="bg-[#392820] pt-20" id="apply-form">
       <h1 className="text-center text-white text-5xl font-bold mb-20">
