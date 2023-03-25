@@ -4,14 +4,11 @@ import DropdownBusiness from "../components/buttons/DropdownBusiness";
 import { validationSchema } from "../constants/validationSchema";
 import DropdownServices from "../components/buttons/DropdownServices";
 import emailjs from "@emailjs/browser";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 const ApplyForm = () => {
   // EmailJS + Formik
   const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-  };
 
   const initialValues = {
     firstName: "",
