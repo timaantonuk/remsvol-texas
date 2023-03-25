@@ -30,13 +30,32 @@ img {
 /* .gallery-images img:not(:first-child) {
   display: none !important;
 }
+
+/* Fix thatt crap */
+@media (min-width:1024px) {
+  .gallery-images img{
+    display: block !important;
+
+  }
+  .gallery-images img:first-child {
+    
+    display: none !important;
+  }
+
+} */
+
+
+
+/* .gallery-images img:not(:first-child) {
+  display: none !important;
+}
 @media (min-width:1024px) {
   .gallery-images img:not(:first-child, :last-child, :nth-child(2), :nth-child(3)) {
     display: block !important;
   }
 } */
 
-.gallery-images
+/* .gallery-images
   img:not(:first-child, :last-child, :nth-child(2), :nth-child(3)) {
   display: none !important;
 }
@@ -45,13 +64,13 @@ img {
     img:not(:first-child, :last-child, :nth-child(2), :nth-child(3)) {
     display: block !important;
   }
-}
-
+} */
+/* 
 @media (max-width: 1022px) {
   .gallery-images img:not(:first-child) {
     display: none !important;
   }
-}
+} */
 
 @media (max-width: 1180px) {
   .navigation__logo {
