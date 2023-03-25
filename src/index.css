@@ -32,19 +32,14 @@ img {
 }
 
 /* Fix thatt crap */
-@media (min-width:1024px) {
-  .gallery-images img{
+@media (min-width: 1024px) {
+  .gallery-images img {
     display: block !important;
-
   }
   .gallery-images img:first-child {
-    
     display: none !important;
   }
-
-} */
-
-
+}
 
 /* .gallery-images img:not(:first-child) {
   display: none !important;
