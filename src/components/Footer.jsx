@@ -8,9 +8,8 @@ const navigation = {
   ],
   social: [
     {
-      name: "Facebook",
-
-      href: "https://www.facebook.com/people/Remsvol-LLC/100077963119966/",
+      name: 'Facebook',
+      href: 'https://www.facebook.com/groups/remsvoltexas',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -22,8 +21,8 @@ const navigation = {
       ),
     },
     {
-      name: "Instagram",
-      href: "https://www.instagram.com/remsvol/",
+      name: 'Instagram',
+      href: 'https://www.instagram.com/remsvoltexas/',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -36,8 +35,8 @@ const navigation = {
     },
 
     {
-      name: "YouTube",
-      href: "https://www.youtube.com/channel/UC5NMmpM3PEhac5A9fjvhDfA",
+      name: 'YouTube',
+      href: 'https://www.youtube.com/@remsvoltexas',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path

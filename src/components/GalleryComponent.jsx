@@ -18,9 +18,20 @@ function GalleryComponent() {
     setViewerIsOpen(false);
   };
 
-  const handleImageLoad = () => {
-    setLoading(false);
-  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // assuming mobile breakpoint is 768px
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const photos = [
     {
       smallSrc: "/img/gallery-min.jpg",
@@ -28,7 +39,7 @@ function GalleryComponent() {
       width: 1,
       height: 1,
       modal: {
-        src: "/img/gallery-min.jpg",
+        src: isMobile ? '/img/gallery-min.jpg' : '/img/gallery1.jpeg',
       },
     },
     {

@@ -9,12 +9,12 @@ const Navigation = () => {
   return (
     <nav className='navigation sticky top-0'>
       <div className='navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-[#ebe0bf]'>
-        <div className='navigation__logo w-40  lg:mr-48'>
+        <div className='navigation__logo w-40  lg:mr-48 flex items-center'>
           <a href='#' className='navigation__logo link'>
             <img
               loading='lazy'
               src='/img/logo-v3.png'
-              className=''
+              className='flex items-center'
               alt='Remsvol'
             />
           </a>
