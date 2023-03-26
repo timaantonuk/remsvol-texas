@@ -66,7 +66,7 @@ export default function Reviews() {
       <div className="review lg:mx-16 mx-10">
         <h2 className="sr-only">Company Reviews</h2>
 
-        <div className="-my-10">
+        <div className="-my-10 overflow-hidden">
           {reviews.map((review, reviewIdx) => (
             <AnimationOnScroll
               animateIn={

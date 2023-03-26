@@ -49,7 +49,7 @@ const ApplyForm = () => {
     },
   });
   return (
-    <div className="bg-[#392820] pt-20" id="apply-form">
+    <div className="bg-[#392820] pt-20">
       <h1 className="text-center text-white text-5xl font-bold mb-20">
         Client application
       </h1>
@@ -57,7 +57,8 @@ const ApplyForm = () => {
       <form
         ref={form}
         onSubmit={formik.handleSubmit}
-        className="flex justify-center items-center flex-col"
+        className="flex justify-center items-center flex-col "
+        id="apply-form"
       >
         {/* // first name */}
 
