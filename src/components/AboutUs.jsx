@@ -48,9 +48,7 @@ export default function AboutUs() {
           </p>
           <Link to="apply-form" smooth={true} duration={500}>
             <div className="mt-8">
-              <p
-                className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer"
-              >
+              <p className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
                 Get an estimate
               </p>
             </div>

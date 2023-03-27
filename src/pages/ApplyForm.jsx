@@ -49,8 +49,8 @@ const ApplyForm = () => {
     },
   });
   return (
-    <div className="bg-[#392820] pt-20">
-      <h1 className="text-center text-white text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
+    <div className="bg-[#EBD5A0] pt-20">
+      <h1 className="text-center text-[#392820] text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
         Client application
       </h1>
 

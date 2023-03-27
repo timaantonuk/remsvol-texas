@@ -58,8 +58,8 @@ function classNames(...classes) {
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="bg-[#392820] pt-20 pb-20">
-      <h1 className="text-center text-white lg:text-5xl text-3xl font-bold mb-12">
+    <div id="reviews" className="bg-[#EBD5A0] pt-20 pb-20">
+      <h1 className="text-center text-[#392820] lg:text-5xl text-3xl font-bold mb-12">
         Company Reviews
       </h1>
 
@@ -69,8 +69,8 @@ export default function Reviews() {
         <div className="-my-10 overflow-hidden">
           {reviews.map((review, reviewIdx) => (
             <AnimationOnScroll
-            key={reviewIdx}
-            animateOnce 
+              key={reviewIdx}
+              animateOnce
               animateIn={
                 reviewIdx % 2 === 0
                   ? "animate__fadeInLeftBig"
@@ -79,7 +79,7 @@ export default function Reviews() {
             >
               <div
                 key={review.id}
-                className="flex space-x-4 text-sm text-white"
+                className="flex space-x-4 text-sm text-[#392820]"
               >
                 <div className="flex-none py-10">
                   <img
@@ -91,11 +91,11 @@ export default function Reviews() {
                 </div>
                 <div
                   className={classNames(
-                    reviewIdx === 0 ? "" : "border-t border-gray-200",
+                    reviewIdx === 0 ? "" : "border-t border-[#392820]",
                     "flex-1 py-10"
                   )}
                 >
-                  <h3 className="font-bold text-white lg:text-lg">
+                  <h3 className="font-bold text-[#392820] lg:text-lg">
                     {review.author}
                   </h3>
                   <p>
@@ -119,7 +119,7 @@ export default function Reviews() {
                   <p className="sr-only">{review.rating} out of 5 stars</p>
 
                   <div
-                    className="prose prose-sm mt-4 max-w-none text-white lg:text-base"
+                    className="prose prose-sm mt-4 max-w-none text-[#392820] lg:text-base"
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>
