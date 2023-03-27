@@ -58,7 +58,7 @@ function classNames(...classes) {
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="bg-[#392820] pt-20 pb-40">
+    <div id="reviews" className="bg-[#392820] pt-20 pb-20">
       <h1 className="text-center text-white lg:text-5xl text-3xl font-bold mb-12">
         Company Reviews
       </h1>
@@ -69,6 +69,8 @@ export default function Reviews() {
         <div className="-my-10 overflow-hidden">
           {reviews.map((review, reviewIdx) => (
             <AnimationOnScroll
+            key={reviewIdx}
+            animateOnce 
               animateIn={
                 reviewIdx % 2 === 0
                   ? "animate__fadeInLeftBig"

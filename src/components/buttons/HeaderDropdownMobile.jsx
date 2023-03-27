@@ -29,10 +29,9 @@ function HeaderDropdownMobile() {
           onClick={toggleDropdown}
         >
           <svg
-            cla
             stroke='currentColor'
             fill='#392820'
-            stroke-width='0'
+            strokeWidth='0'
             viewBox='0 0 512 512'
             height='2em'
             width='2em'
@@ -51,7 +50,7 @@ function HeaderDropdownMobile() {
             <svg
               stroke='currentColor'
               fill='#392820'
-              stroke-width='0'
+              strokeWidth='0'
               viewBox='0 0 1024 1024'
               height='2em'
               width='2em'

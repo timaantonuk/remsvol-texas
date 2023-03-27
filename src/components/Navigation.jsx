@@ -13,8 +13,8 @@ const Navigation = () => {
           <a className="navigation__logo link">
             <img
               loading="lazy"
-              src="/img/logo-v3.png"
-              className="flex items-center"
+              src="/img/logo-v2.png"
+              className="flex items-center sepia-[80%]"
               alt="Remsvol"
             />
           </a>
@@ -34,14 +34,12 @@ const Navigation = () => {
         <div className="navigation__icons md:gap-4 gap-8 hidden md:hidden lg:flex items-center">
           <div className="lg:hidden">
             <Link to="contact-us" smooth={true} duration={500}>
-              <a>
                 <img
                   loading="lazy"
                   className="h-6"
                   src="/img/icons/mail-icon.png"
                   alt="Mail to"
                 />
-              </a>
             </Link>
             <a
               href="https://www.instagram.com/remsvol/"
@@ -80,14 +78,12 @@ const Navigation = () => {
               />
             </a>
             <Link to="contact-us" smooth={true} duration={500}>
-              <a>
                 <img
                   loading="lazy"
                   className="h-6"
                   src="/img/icons/phone-icon.png"
                   alt="contact to"
                 />
-              </a>
             </Link>
           </div>
           <Link to="apply-form" smooth={true} duration={500}>

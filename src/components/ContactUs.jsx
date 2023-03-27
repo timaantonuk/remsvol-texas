@@ -23,7 +23,7 @@ const ContactUs = () => {
             <svg
               stroke="#382820"
               fill="#382820"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               height="1.5em"
               width="1.5em"
@@ -43,7 +43,7 @@ const ContactUs = () => {
             <svg
               stroke="#382820"
               fill="none"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               height="1.5em"
               width="1.5em"
@@ -75,7 +75,7 @@ const ContactUs = () => {
             <svg
               stroke="#382820"
               fill="#382820"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               height="1.5em"
               width="1.5em"
@@ -101,7 +101,7 @@ const ContactUs = () => {
               <svg
                 stroke="#382820"
                 fill="#382820"
-                stroke-width="0"
+                strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
                 height="1.5em"
@@ -121,7 +121,7 @@ const ContactUs = () => {
               <svg
                 stroke="#382820"
                 fill="#382820"
-                stroke-width="0"
+                strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
                 height="1.5em"
@@ -137,7 +137,7 @@ const ContactUs = () => {
               <svg
                 stroke="#382820"
                 fill="#382820"
-                stroke-width="0"
+                strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
                 height="1.7em"
@@ -157,7 +157,7 @@ const ContactUs = () => {
               <svg
                 stroke="#382820"
                 fill="#382820"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 1024 1024"
                 height="1.7em"
                 width="1.7em"

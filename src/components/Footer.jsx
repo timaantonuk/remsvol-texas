@@ -58,15 +58,14 @@ export default function Footer() {
           className="-mb-6 columns-4 lg:columns-2 sm:flex sm:justify-center gap-0 lg:gap-4 text-center"
           aria-label="Footer"
         >
-          {navigation.main.map((item) => (
-            <Link to={item.scroll} smooth={true} duration={500}>
+          {navigation.main.map((item, i) => (
+            <Link to={item.scroll} smooth={true} duration={500} key={i}>
               <div key={item.name} className="pb-6">
-                <a
-                  href={item.href}
+                <p
                   className="text-sm leading-6 text-white hover:text-[#a67651]"
                 >
                   {item.name}
-                </a>
+                </p>
               </div>
             </Link>
           ))}
