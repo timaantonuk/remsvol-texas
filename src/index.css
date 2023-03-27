@@ -40,7 +40,7 @@ img {
     display: none !important;
   }
 } */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .gallery-images{
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ img {
   .gallery-images img:not(:first-child) {
     display: none !important;
   }
-}
+} */
 
 @media (max-width: 1180px) {
   .navigation__logo {
