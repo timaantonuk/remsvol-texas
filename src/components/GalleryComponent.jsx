@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useRef, useEffect, memo } from "react";
 import { animated, useSpring } from "react-spring";
 import { MagnifyingGlassPlusIcon } from "@heroicons/react/20/solid";
