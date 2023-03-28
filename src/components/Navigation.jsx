@@ -12,14 +12,18 @@ const Navigation = () => {
       <div className="navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-[#ebe0bf]">
         <div className="navigation__logo w-40  lg:mr-48 flex items-center">
           <a className="navigation__logo link">
-          <picture>
-          <source
-            media='(max-width: 1023px)'
-            srcset='/img/logo-v2-sm.png'
-          />
-          <source media='(min-width: 1024px)' srcset="/img/logo-v2.png" />
-          <img src="/img/logo-v2.png" className="flex items-center sepia-[80%]" alt="Remsvol" />
-        </picture>
+            <picture>
+              <source
+                media="(max-width: 1023px)"
+                srcSet="/img/logo-v2-sm.png"
+              />
+              <source media="(min-width: 1024px)" srcSet="/img/logo-v2.png" />
+              <img
+                src="/img/logo-v2.png"
+                className="flex items-center sepia-[80%]"
+                alt="Remsvol"
+              />
+            </picture>
           </a>
         </div>
         <div className="navigation__items hidden md:hidden lg:block">
@@ -37,12 +41,12 @@ const Navigation = () => {
         <div className="navigation__icons md:gap-4 gap-8 hidden md:hidden lg:flex items-center">
           <div className="lg:hidden">
             <Link to="contact-us" smooth={true} duration={500}>
-                <img
-                  loading="lazy"
-                  className="h-6"
-                  src="/img/icons/mail-icon.png"
-                  alt="Mail to"
-                />
+              <img
+                loading="lazy"
+                className="h-6"
+                src="/img/icons/mail-icon.png"
+                alt="Mail to"
+              />
             </Link>
             <a
               href="https://www.instagram.com/remsvol/"
@@ -81,12 +85,12 @@ const Navigation = () => {
               />
             </a>
             <Link to="contact-us" smooth={true} duration={500}>
-                <img
-                  loading="lazy"
-                  className="h-6"
-                  src="/img/icons/phone-icon.png"
-                  alt="contact to"
-                />
+              <img
+                loading="lazy"
+                className="h-6"
+                src="/img/icons/phone-icon.png"
+                alt="contact to"
+              />
             </Link>
           </div>
           <Link to="apply-form" smooth={true} duration={500}>
