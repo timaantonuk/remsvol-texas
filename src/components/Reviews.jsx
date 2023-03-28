@@ -63,10 +63,10 @@ export default function Reviews() {
         Company Reviews
       </h1>
 
-      <div className="review lg:mx-16 mx-10">
+      <div className="review lg:mx-16 mx-5">
         <h2 className="sr-only">Company Reviews</h2>
 
-        <div className="-my-10 overflow-hidden">
+        <div className="-my-10 pt-10 pb-14 lg:pt-0 overflow-hidden">
           {reviews.map((review, reviewIdx) => (
             <AnimationOnScroll
               key={reviewIdx}
@@ -79,9 +79,9 @@ export default function Reviews() {
             >
               <div
                 key={review.id}
-                className="flex space-x-4 text-sm text-[#392820]"
+                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-[#392820]"
               >
-                <div className="flex-none py-10">
+                <div className="flex-none py-5 lg:py-10">
                   <img
                     loading="lazy"
                     src={review.avatarSrc}
@@ -91,18 +91,18 @@ export default function Reviews() {
                 </div>
                 <div
                   className={classNames(
-                    reviewIdx === 0 ? "" : "border-t border-[#392820]",
-                    "flex-1 py-10"
+                    reviewIdx === 0 ? "" : "border-t-0 lg:border-t border-[#392820]",
+                    "flex-1 lg:py-10"
                   )}
                 >
-                  <h3 className="font-bold text-[#392820] lg:text-lg">
+                  <h3 className="font-bold text-center lg:text-left text-[#392820] text-xl lg:text-lg">
                     {review.author}
                   </h3>
                   <p>
                     <time dateTime={review.datetime}>{review.date}</time>
                   </p>
 
-                  <div className="mt-4 flex items-center">
+                  <div className="mt-4 flex items-center justify-center lg:justify-start">
                     {[0, 1, 2, 3, 4].map((rating) => (
                       <StarIcon
                         key={rating}
@@ -110,7 +110,7 @@ export default function Reviews() {
                           review.rating > rating
                             ? "text-yellow-400"
                             : "text-gray-300",
-                          "h-5 w-5 flex-shrink-0"
+                          "h-5 w-5 flex-shrink-0 drop-shadow-lg lg:drop-shadow-none"
                         )}
                         aria-hidden="true"
                       />
@@ -119,7 +119,7 @@ export default function Reviews() {
                   <p className="sr-only">{review.rating} out of 5 stars</p>
 
                   <div
-                    className="prose prose-sm mt-4 max-w-none text-[#392820] lg:text-base"
+                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-[#392820] lg:text-base"
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>

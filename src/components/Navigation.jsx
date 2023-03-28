@@ -11,12 +11,14 @@ const Navigation = () => {
       <div className="navigation__wrapper  flex justify-between sm:gap-8 lg:gap-10 flex-wrap items-center  flex-row lg:h-20 px-10 bg-[#ebe0bf]">
         <div className="navigation__logo w-40  lg:mr-48 flex items-center">
           <a className="navigation__logo link">
-            <img
-              loading="lazy"
-              src="/img/logo-v2.png"
-              className="flex items-center sepia-[80%]"
-              alt="Remsvol"
-            />
+          <picture>
+          <source
+            media='(max-width: 1023px)'
+            srcset='/img/logo-v2-sm.png'
+          />
+          <source media='(min-width: 1024px)' srcset="/img/logo-v2.png" />
+          <img src="/img/logo-v2.png" className="flex items-center sepia-[80%]" alt="Remsvol" />
+        </picture>
           </a>
         </div>
         <div className="navigation__items hidden md:hidden lg:block">

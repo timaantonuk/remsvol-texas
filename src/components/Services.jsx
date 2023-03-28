@@ -1,8 +1,8 @@
-import { Link } from 'react-scroll';
-import { tiers } from '../constants/services';
+import { Link } from 'react-scroll'
+import { tiers } from '../constants/services'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(' ')
 }
 
 export default function Services() {
@@ -49,12 +49,15 @@ export default function Services() {
                 {tier.description}
               </p>
 
-              <img
-                alt='section-img'
-                loading='lazy'
-                src={tier.img}
-                className='rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 '
-              />
+              <picture>
+                <source media='(max-width: 1023px)' srcset={tier.smallImg} />
+                <source media='(min-width: 1024px)' srcset={tier.img} />
+                <img
+                  src={tier.img}
+                  className='rounded-2xl rounded-t-full h-52 w-full object-cover pt-4 '
+                  alt='service-option'
+                />
+              </picture>
 
               <p className='mt-6 flex items-baseline gap-x-1'>
                 <span
@@ -94,5 +97,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-  );
+  )
 }

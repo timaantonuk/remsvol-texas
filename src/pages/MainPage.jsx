@@ -7,10 +7,12 @@ import GalleryComponent from "../components/GalleryComponent";
 import ApplyForm from "./ApplyForm";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/buttons/ScrollToTop";
 
 const MainPage = () => {
   return (
     <>
+      <ScrollToTop/>
       <Header />
       <AboutUs />
       <Services />

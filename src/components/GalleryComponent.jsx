@@ -147,6 +147,7 @@ const Gallery = () => {
                 <img
                   src={slide.thumbnail}
                   alt=""
+                  loading="lazy"
                   className={`max-w-full hover:scale-102 
                   ${index === 0 ? "lg:hidden block " : ""} 
                   ${index > 0 ? "hidden  lg:block" : ""} 
