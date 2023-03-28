@@ -58,7 +58,7 @@ function classNames(...classes) {
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="bg-[#EBD5A0] pt-20 pb-20">
+    <div id="reviews" className="bg-[#D4A96E] pt-20 pb-20">
       <h1 className="text-center text-[#392820] lg:text-5xl text-3xl font-bold mb-12">
         Company Reviews
       </h1>
