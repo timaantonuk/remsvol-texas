@@ -50,10 +50,10 @@ const ScrollToTop = () => {
   return (
     <animated.button
     style={buttonSpring}
-      className='z-[99] transition-opacity opacity-0 fixed w-10 h-10 lg:w-14 lg:h-14 bottom-10 right-4 lg:bottom-20 lg:right-7 flex justify-center items-center rounded-full bg-amber-300/95 border-none'
+      className='z-[99] transition-opacity bg-medium_gray opacity-0 fixed w-10 h-10 lg:w-14 lg:h-14 bottom-10 right-4 lg:bottom-20 lg:right-7 flex justify-center items-center rounded-full  border-none'
       onClick={scrollToTop}
     >
-      <animated.span style={spring}><ArrowUpIcon width={30} color={'gray'} /></animated.span>
+      <animated.span style={spring}><ArrowUpIcon width={30} color={'white'} /></animated.span>
     </animated.button>
   )
 }

@@ -30,7 +30,7 @@ function HeaderDropdownMobile() {
         >
           <svg
             stroke='currentColor'
-            fill='#392820'
+            fill='#474745'
             strokeWidth='0'
             viewBox='0 0 512 512'
             height='2em'
@@ -42,14 +42,14 @@ function HeaderDropdownMobile() {
         </button>
       </div>
       <animated.div
-        className='fixed z-50 bg-[#c09559] shadow-lg rounded h-screen w-screen'
+        className='fixed z-50 bg-medium_gray shadow-lg rounded h-screen w-screen'
         style={props}
       >
        <div className='h-full relative'>
           <button onClick={toggleDropdown} className='absolute right-10 top-5'>
             <svg
               stroke='currentColor'
-              fill='#392820'
+              fill='#474745'
               strokeWidth='0'
               viewBox='0 0 1024 1024'
               height='2em'
@@ -63,7 +63,7 @@ function HeaderDropdownMobile() {
             <Link to='about-us' smooth={true} duration={500}>
               <li
                 href='#'
-                className='block px-4 py-2 h-full  hover:bg-[#392820]  duration-300 '
+                className='block px-4 py-2 h-full  hover:bg-dark_gray  duration-300 '
                 onClick={handleLinkClick}
               >
                 About us
@@ -72,7 +72,7 @@ function HeaderDropdownMobile() {
             <Link to='services' smooth={true} duration={500}>
               <li
                 href='#'
-                className='block px-4 py-2 hover:bg-[#392820] duration-300 '
+                className='block px-4 py-2 hover:bg-dark_gray duration-300 '
                 onClick={handleLinkClick}
               >
                 Services
@@ -81,7 +81,7 @@ function HeaderDropdownMobile() {
             <Link to='reviews' smooth={true} duration={500}>
               <li
                 href='#'
-                className='block px-4 py-2 hover:bg-[#392820] duration-300 '
+                className='block px-4 py-2 hover:bg-dark_gray duration-300 '
                 onClick={handleLinkClick}
               >
                 Reviews
@@ -90,7 +90,7 @@ function HeaderDropdownMobile() {
             <Link to='contact-us' smooth={true} duration={500}>
               <li
                 href='#'
-                className='block px-4 py-2 hover:bg-[#392820] duration-300 '
+                className='block px-4 py-2 hover:bg-dark_gray duration-300 '
                 onClick={handleLinkClick}
               >
                 Contact us

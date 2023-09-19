@@ -3,9 +3,9 @@ export default function AboutUs() {
   return (
     // OnHover should move
 
-    <div className="relative bg-[#221813] group" id="about-us">
-      <div className="relative h-80 overflow-hidden bg-[#ebe0bf] md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
-        <picture>
+    <div className="relative bg-light_gray group" id="about-us">
+      <div className="relative h-80 overflow-hidden bg-medium-gray md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+        {/* <picture>
           <source
             media="(max-width: 1023px)"
             srcSet="/img/about-us-bg-sm.jpg"
@@ -16,7 +16,7 @@ export default function AboutUs() {
             className="h-full w-full object-cover"
             alt="About us"
           />
-        </picture>
+        </picture> */}
         <svg
           viewBox="0 0 926 676"
           aria-hidden="true"
@@ -44,18 +44,17 @@ export default function AboutUs() {
       </div>
       <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
         <div className="pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-dark_gray sm:text-4xl">
             About Us
           </h2>
-          <p className="mt-6 text-base leading-7 text-gray-300">
-            We take construction to the next level by building strong
-            relationships & providing a broad variety solution tailored for your
-            project. From blueprint to closeout - entrust your project to the
-            professionals by submitting your blueprints.
+          <p className="mt-6 text-base leading-7 text-dark_gray">
+          We take care of everything from designing to planning and executing various home improvement projects, including kitchen and bathroom remodeling, room additions, 
+          second-floor expansions and external renovations. Our dedicated in-house home design team pays close attention to your requirements, desires, and aesthetic preferences,
+           all while considering your budget constraints. 
           </p>
           <Link to="apply-form" smooth={true} duration={500}>
             <div className="mt-8">
-              <p className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
+              <p className="inline-flex rounded-md bg-dark_gray px-3.5 py-2.5 text-sm font-semibold  text-light_white shadow-sm duration-200 hover:bg-medium_gray focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
                 Get an estimate
               </p>
             </div>

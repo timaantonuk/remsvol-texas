@@ -7,48 +7,48 @@ const reviews = [
     id: 1,
     rating: 5,
     content: `
-      <p>During the past year that Remsvol has been completing renovations at our community we have been overly pleased at the communication and thorough work that has been delivered. Remsvol would be a tremendous asset to any organization needing renovations and they have the best prices in the market, we could not be more pleased to work with this company.</p>
+      <p>Arion did an exceptional job renovating my bathroom. As a homeowner, I've had my fair share of experiences with contractors, but Arion truly stood out. Their team was efficient,
+      courteous, and made sure to keep the workspace tidy throughout the project. The end result exceeded my expectations, and the attention to detail they put into every aspect of
+      the bathroom renovation was impressive. I'm very satisfied with their work.</p>
     `,
-    author: "The Willows Ashley Park",
-    avatarSrc: "/img/willows-logo.jpeg",
+    author: "Michael Anderson",
+    avatarSrc: "/img/reviews-image-0.jpg",
   },
   {
     id: 2,
     rating: 5,
     content: `
-      <p>Our team was happy to work with Remsvol LLC on exterior paining project of entire apartment complex in Charlotte, NC. As the owner of the company, I know what a reliable general contractor means. And the qualities that a contractor must possess can be found in the operations of Remsvol. The management of Remsvol LLC showed their professionalism and loyalty to our company.</p>
+      <p>I recently had the pleasure of working with Arion to update the flooring in my home. The crew was punctual and worked diligently to ensure the project was completed on schedule. I was particularly impressed with the variety of flooring options they offered and their expert recommendations. The new floors have completely transformed the look and feel of my house, and I couldn't be happier. Arion is definitely my go-to for any future home improvement projects.</p>
     `,
 
-    author: `Javier's Painting`,
-    avatarSrc: "/img/javiers-painting-logo.png",
+    author: `James White`,
+    avatarSrc: "/img/reviews-image-1.jpg",
   },
 
   {
     id: 3,
     rating: 5,
     content: `
-      <p>I would like to commend Remsvol LLC for an outstanding job on Preserve at Port
-      Royal renovation project. In my experience, Remsvol has proven to be an excellent
-      professional who eager to show the best quality of their work. We will continue to work with Remsvol on upcoming Complex Renovation projects.</p>
+      <p>I recently hired Arion to remodel my kitchen, and I couldn't be happier with the results! From the initial consultation to the final touches, they were
+      professional and attentive to every detail. The team transformed my outdated kitchen into a modern and functional space that I now love spending time in.
+      The quality of their workmanship is top-notch, and I would highly recommend Arion to anyone looking to renovate their home.</p>
     `,
 
-    author: `Preserve Port Royal`,
-    avatarSrc: "/img/preserve-logo.jpg",
+    author: `Sarah Johnson`,
+    avatarSrc: "/img/reviews-image-2.jpg",
   },
 
   {
     id: 4,
     rating: 5,
     content: `
-      <p>I have had the opportunity to work with Remsvol from 2022. Remsvol LLC has managed these
-      works in the manner that allowed them to be completed on or ahead the schedule while
-      maintaining the excellent relationship with the client, employer and our construction teams on
-      site. On-site coordination was handled very professionally, and all the required paperwork and
-      queries were responded to promptly.</p>
+      <p>Arion did an outstanding job painting the interior of my home. From the start, they provided a detailed quote and timeline for the project, and they stuck to it. 
+      The painting crew was professional, respectful, and paid great attention to detail. The color selection assistance they provided was also a big help in achieving the
+       look I wanted. I'm extremely satisfied with the end result, and my home looks brand new thanks to Arion's expertise in painting. Highly recommended!</p>
     `,
 
-    author: `DM Construction`,
-    avatarSrc: "/img/dm-construction-logo.jpg",
+    author: `Marcus Davis`,
+    avatarSrc: "/img/reviews-image-3.jpg",
   },
 ];
 
@@ -58,8 +58,8 @@ function classNames(...classes) {
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="bg-[#D4A96E] pt-20 pb-20">
-      <h1 className="text-center text-[#392820] lg:text-5xl text-3xl font-bold mb-12">
+    <div id="reviews" className="bg-light_gray pt-20 pb-20">
+      <h1 className="text-center text-dark_gray lg:text-5xl text-3xl font-bold mb-12">
         Company Reviews
       </h1>
 
@@ -79,7 +79,7 @@ export default function Reviews() {
             >
               <div
                 key={review.id}
-                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-[#392820]"
+                className="shadow-lg lg:shadow-none px-8 mt-6 lg:mt-0 lg:px-0 pb-10 lg:pb-0 rounded-3xl lg:rounded-none bg-amber-100/20 lg:bg-transparent flex sm:max-w-[80%] lg:max-w-full mx-auto lg:mx-0 flex-col lg:flex-row lg:space-x-4 text-sm text-dark_gray"
               >
                 <div className="flex-none py-5 lg:py-10">
                   <img
@@ -91,11 +91,13 @@ export default function Reviews() {
                 </div>
                 <div
                   className={classNames(
-                    reviewIdx === 0 ? "" : "border-t-0 lg:border-t border-[#392820]",
+                    reviewIdx === 0
+                      ? ""
+                      : "border-t-0 lg:border-t border-[#392820]",
                     "flex-1 lg:py-10"
                   )}
                 >
-                  <h3 className="font-bold text-center lg:text-left text-[#392820] text-xl lg:text-lg">
+                  <h3 className="font-bold text-center lg:text-left text-dark_gray text-xl lg:text-lg">
                     {review.author}
                   </h3>
                   <p>
@@ -119,7 +121,7 @@ export default function Reviews() {
                   <p className="sr-only">{review.rating} out of 5 stars</p>
 
                   <div
-                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-[#392820] lg:text-base"
+                    className="text-center lg:text-left prose prose-sm mt-4 max-w-none text-dark_gray lg:text-base"
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>

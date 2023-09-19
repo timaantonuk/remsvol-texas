@@ -5,24 +5,24 @@ import GMap from "./GMap/GMap";
 const ContactUs = () => {
   return (
     <section
-      className="contact-us__section relative bg-[#ebe0bf]"
+      className="contact-us__section relative bg-dark_gray"
       id="contact-us"
     >
       <div className="relative mx-auto max-w-10xl py-24 sm:py-32 lg:py-40 lg:px-4">
         <div className="pr-6 pl-6 md:w-2/3 md:pl-4 lg:w-1/2 lg:pl-8  xl:pl-12">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-[#382820] sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-light_gray sm:text-4xl">
             Contact Us
           </p>
 
-          <h2 className="text-base font-semibold leading-7 mt-4 mb-10 text-[#382820]">
+          <h2 className="text-base font-semibold leading-7 mt-4 mb-10 text-light_gray">
             For any additional inquiries, please contact us using the
             information below:
           </h2>
 
           <div className="email flex flex-row items-center gap-2">
             <svg
-              stroke="#382820"
-              fill="#382820"
+              stroke="#B7C1C3"
+              fill="#B7C1C3"
               strokeWidth="0"
               viewBox="0 0 24 24"
               height="1.5em"
@@ -33,7 +33,7 @@ const ContactUs = () => {
             </svg>
             <a
               href="mailto:Office@remsvoltexas.com"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-light_gray hover:border-b-[1px] border-ligtext-light_gray transition-all duration-100"
             >
               Office@remsvoltexas.com
             </a>
@@ -41,7 +41,7 @@ const ContactUs = () => {
 
           <div className="phone flex flex-row items-center gap-2">
             <svg
-              stroke="#382820"
+              stroke="#B7C1C3"
               fill="none"
               strokeWidth="0"
               viewBox="0 0 24 24"
@@ -51,21 +51,21 @@ const ContactUs = () => {
             >
               <path
                 d="M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z"
-                fill="#382820"
+                fill="#B7C1C3"
               ></path>
               <path
                 d="M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z"
-                fill="#382820"
+                fill="#B7C1C3"
               ></path>
               <path
                 d="M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z"
-                fill="#382820"
+                fill="#B7C1C3"
               ></path>
             </svg>
 
             <a
               href="tel:8329439174"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-light_gray hover:border-b-[1px] border-ligtext-light_gray transition-all duration-100"
             >
               +1 (832) 943 91 74
             </a>
@@ -73,8 +73,8 @@ const ContactUs = () => {
 
           <div className="adress flex flex-row items-center gap-2 mb-10">
             <svg
-              stroke="#382820"
-              fill="#382820"
+              stroke="#B7C1C3"
+              fill="#B7C1C3"
               strokeWidth="0"
               viewBox="0 0 24 24"
               height="1.5em"
@@ -86,7 +86,7 @@ const ContactUs = () => {
 
             <p
               href="tel:8329439174"
-              className=" text-base leading-7 text-[#382820] hover:border-b-[1px] border-[#382820] transition-all duration-100"
+              className=" text-base leading-7 text-light_gray hover:border-b-[1px] border-ligtext-light_gray transition-all duration-100"
             >
               6456 Olympia Dr, Houston, Tx, 77057
             </p>
@@ -99,8 +99,8 @@ const ContactUs = () => {
               href="https://www.instagram.com/remsvoltexas/"
             >
               <svg
-                stroke="#382820"
-                fill="#382820"
+                stroke="#B7C1C3"
+                fill="#B7C1C3"
                 strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
@@ -119,8 +119,8 @@ const ContactUs = () => {
               href="https://www.facebook.com/groups/remsvoltexas"
             >
               <svg
-                stroke="#382820"
-                fill="#382820"
+                stroke="#B7C1C3"
+                fill="#B7C1C3"
                 strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
@@ -135,8 +135,8 @@ const ContactUs = () => {
 
             <a href="https://www.youtube.com/@remsvoltexas">
               <svg
-                stroke="#382820"
-                fill="#382820"
+                stroke="#B7C1C3"
+                fill="#B7C1C3"
                 strokeWidth="0"
                 role="img"
                 viewBox="0 0 24 24"
@@ -155,8 +155,8 @@ const ContactUs = () => {
               href="https://twitter.com/remsvoltexas"
             >
               <svg
-                stroke="#382820"
-                fill="#382820"
+                stroke="#B7C1C3"
+                fill="#B7C1C3"
                 strokeWidth="0"
                 viewBox="0 0 1024 1024"
                 height="1.7em"
@@ -170,7 +170,8 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="relative h-80 overflow-hidden bg-[#ebe0bf] md:absolute md:right-0 top-0 md:h-full md:w-1/3 lg:w-1/2">
-        <GMap />
+        {/* <GMap /> */}
+        <img alt="map" src="/img/apple-map.png"></img>
       </div>
     </section>
   );

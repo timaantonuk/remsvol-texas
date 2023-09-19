@@ -7,17 +7,15 @@ function classNames(...classes) {
 
 export default function Services() {
   return (
-    <section className="services__section bg-[#ebe0bf] py-24 sm:py-12">
+    <section className="services__section bg-dark_gray py-24 sm:py-12">
       <div id="services" className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className=" text-4xl font-bold tracking-tight text-[#392820] sm:text-5xl">
+          <p className=" text-4xl font-bold tracking-tight text-light_gray sm:text-5xl">
             Services
           </p>
         </div>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-lg leading-8 text-[#392820]">
-          We offer an extensive array of diverse services ranging from the
-          construction of residential properties to the development of
-          commercial structures.
+        <p className="mx-auto mt-10 max-w-2xl text-center text-lg leading-8 text-light_gray">
+        We provide a wide range of services, covering everything from residential kitchen remodeling to flooring installation and bathroom construction.
         </p>
         <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
           {tiers.map((tier) => (
@@ -26,9 +24,9 @@ export default function Services() {
               className={classNames(
                 tier.color,
                 tier.featured
-                  ? "Custom bg-[#392820] ring-gray-900"
+                  ? "Custom bg-litext-light_gray ring-gray-900"
                   : "ring-gray-200",
-                "rounded-3xl p-8 ring-1 xl:p-10 hover:-translate-y-4 duration-150 "
+                "rounded-3xl p-8 shadow-2xl xl:p-10 hover:-translate-y-4 duration-150 "
               )}
             >
               <h3
@@ -72,8 +70,8 @@ export default function Services() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.featured
-                      ? "bg-[#986235] text-white hover:bg-[#a67651] focus-visible:outline-orange-400"
-                      : "bg-[#a67651] text-white shadow-sm hover:bg-[#82532a] focus-visible:outline-orange-400",
+                      ? "bg-light_gray text-dark_gray hover:bg-dark_gray hover:text-white duration-200 focus-visible:outline-dark_gray"
+                      : "bg-dark_gray text-white shadow-sm hover:bg-medium_gray duration-200 focus-visible:outline-dark_gray",
                     "mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
                   )}
                 >

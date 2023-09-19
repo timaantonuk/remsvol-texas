@@ -34,21 +34,21 @@ function Dropdown() {
       </button>
       <animated.div style={styledProps} className='absolute'>
         <Link to='services' smooth={true} duration={500}>
-          <div className='absolute z-50 bg-[#ebe0bf] py-2 w-32 shadow-lg rounded text-[#392820] left-4 top-7 '>
+          <div className='absolute z-50 bg-medium_gray py-2 w-32 shadow-lg rounded  left-4 top-7 '>
             <p
-              className='block px-4 py-2 h-full hover:bg-[#392820] hover:text-white  duration-300 '
+              className='block px-4 py-2 h-full hover:bg-dark_gray hover:text-white  duration-300 '
               onClick={toggleDropdown}
             >
               Residential
             </p>
             <p
-              className='block px-4 py-2 hover:bg-[#392820] hover:text-white  duration-300 '
+              className='block px-4 py-2 hover:bg-dark_gray hover:text-white  duration-300 '
               onClick={toggleDropdown}
             >
               Commercial
             </p>
             <p
-              className='block px-4 py-2 hover:bg-[#392820] hover:text-white  duration-300 '
+              className='block px-4 py-2 hover:bg-dark_gray hover:text-white  duration-300 '
               onClick={toggleDropdown}
             >
               Custom

@@ -14,6 +14,7 @@ const ApplyForm = () => {
     firstName: "",
     lastName: "",
     email: "",
+    address: "",
     companyName: "",
     licenseNumber: "",
     phoneNumber: "",
@@ -49,8 +50,8 @@ const ApplyForm = () => {
     },
   });
   return (
-    <div className="bg-[#D4A96E] pt-20">
-      <h1 className="text-center text-[#392820] text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
+    <div className="bg-light_gray pt-20">
+      <h1 className="text-center text-dark_gray text-3xl mb-10 lg:text-5xl font-bold lg:mb-20">
         Client application
       </h1>
 
@@ -63,7 +64,7 @@ const ApplyForm = () => {
         {/* // first name */}
 
         <div className="first-row lg:flex justify-between lg:w-2/3 gap-4 w-4/5">
-          <div className="rounded-md px-3 pt-2.5 pb-1.5 mb-4 lg:mb-0 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-1/2">
+          <div className="rounded-md px-3 pt-2.5 pb-1.5 mb-4 lg:mb-0 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-1/2">
             <label
               htmlFor="name"
               className="block text-xs font-medium text-[#392820]"
@@ -89,7 +90,7 @@ const ApplyForm = () => {
           </div>
           {/* // last name */}
 
-          <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f]  lg:w-1/2 mb-4 lg:mb-0">
+          <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray  lg:w-1/2 mb-4 lg:mb-0">
             <label
               htmlFor="surname"
               className="block text-xs font-medium text-[#392820]"
@@ -115,7 +116,7 @@ const ApplyForm = () => {
 
         {/* email */}
 
-        <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
+        <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
             className="block text-xs font-medium text-[#392820]"
@@ -141,9 +142,31 @@ const ApplyForm = () => {
           </div>
         </div>
 
-        {/* company name */}
+ {/* Your address */}
 
-        <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 mt-4 w-4/5  ">
+ <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 mt-4 w-4/5  ">
+          <label
+            htmlFor="address"
+            className="block text-xs font-medium text-[#392820]"
+          >
+            Your address (optional)
+          </label>
+          <input
+            onChange={(e) =>
+              formik.setFieldValue("address", e.target.value)
+            }
+            type="text"
+            name="address"
+            value={formik.values.address}
+            id="address"
+            className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+            placeholder="Your street name"
+          />
+        </div>
+
+        {/* Company name */}
+
+        <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 mt-4 w-4/5  ">
           <label
             htmlFor="companyname"
             className="block text-xs font-medium text-[#392820]"
@@ -165,7 +188,7 @@ const ApplyForm = () => {
 
         {/* license number */}
 
-        <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 mt-4 w-4/5  ">
+        <div className="rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 mt-4 w-4/5  ">
           <label
             htmlFor="license"
             className="block text-xs font-medium text-[#392820]"
@@ -204,7 +227,7 @@ const ApplyForm = () => {
         </div>
 
         {/* phone number */}
-        <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
+        <div className=" rounded-md px-3 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
             className="block text-xs font-medium text-[#392820]"
@@ -232,7 +255,7 @@ const ApplyForm = () => {
           </div>
         </div>
         {/* additional info */}
-        <div className=" rounded-md px-3 mt-4 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-[#bb8a4f] lg:w-2/3 lg:mt-4 w-4/5  ">
+        <div className=" rounded-md px-3 mt-4 pt-2.5 pb-1.5 shadow-sm ring-inset bg-white  focus-within:ring-2 focus-within:ring-medium_gray lg:w-2/3 lg:mt-4 w-4/5  ">
           <label
             htmlFor="email"
             className="block text-xs font-medium text-[#392820]"
@@ -260,7 +283,7 @@ const ApplyForm = () => {
             onClick={formik.handleSubmit}
             disabled={formik.isSubmitting}
             type="submit"
-            className=" flex justify-center w-full text-center rounded-md text-lg bg-[#986235] mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-[#a67651] duration-300 disabled:opacity-50 disabled:cursor-not-allowed "
+            className=" flex justify-center w-full text-center rounded-md text-lg bg-dark_gray mx-auto lg:w-1/2 py-4  px-2.5 font-semibold text-white shadow-sm hover:bg-medium_gray duration-300 disabled:opacity-50 disabled:cursor-not-allowed "
           >
             Submit
           </button>

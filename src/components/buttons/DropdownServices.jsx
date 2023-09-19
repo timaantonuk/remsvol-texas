@@ -32,7 +32,7 @@ export default function DropdownServices({onChange}) {
       {({ open }) => (
         <>
           <div className="relative mt-2">
-            <Listbox.Button className="min-h-[36px] relative flex justify-around w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-[#986235] sm:text-sm sm:leading-6">
+            <Listbox.Button className="min-h-[36px] relative flex justify-around w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-medium_gray sm:text-sm sm:leading-6">
               <span className="flex items-center">
                 {selected && <img
                   src={selected.avatar}
@@ -63,7 +63,7 @@ export default function DropdownServices({onChange}) {
                     className={({ active }) =>
                       classNames(
                         active
-                          ? "bg-[#986235] duration-300 text-white"
+                          ? "bg-dark_gray duration-300 text-white"
                           : "text-gray-900",
                         "relative cursor-default select-none py-2 pl-3 pr-9 text-lg"
                       )
@@ -92,7 +92,7 @@ export default function DropdownServices({onChange}) {
                         {selected ? (
                           <span
                             className={classNames(
-                              active ? "text-white" : "text-[#986235]",
+                              active ? "text-white" : "text-dark_gray",
                               "absolute inset-y-0 right-0 flex items-center pr-4"
                             )}
                           >

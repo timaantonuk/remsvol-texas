@@ -84,8 +84,8 @@ const Gallery = () => {
   }, [slideNumber]);
 
   return (
-    <section className="bg-[#ebe0bf] py-10">
-      <h1 className="text-3xl lg:text-5xl flex justify-center pb-4 lg:pb-5 font-bold text-[#392820] ">
+    <section className="bg-dark_gray py-10">
+      <h1 className="text-3xl lg:text-5xl flex justify-center pb-4 lg:pb-5 font-bold text-light_gray ">
         Our gallery
       </h1>
       <p onClick={()=>handleOpenModal(1)} className="lg:hidden border-b w-fit mx-auto cursor-pointer border-b-black
@@ -94,7 +94,7 @@ const Gallery = () => {
       {openModal && (
         <div
           ref={modalRef}
-          className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
+          className="sliderWrap bg-dark_gray  fixed top-0 bottom-0 left-0 right-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
         >
           <FontAwesomeIcon
             icon={faCircleXmark}
@@ -133,7 +133,7 @@ const Gallery = () => {
         </div>
       )}
 
-      <div className=" galleryWrap bg-[#ebe0bf] py-10 flex flex-wrap gap-10 items-center justify-center max-w-620 mx-auto">
+      <div className=" galleryWrap bg-dark_gray py-10 flex flex-wrap gap-10 items-center justify-center max-w-620 mx-auto">
         {galleryImages &&
           galleryImages.map((slide, index) => {
             return (
